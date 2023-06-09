@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: demo-1
+        uri: lb://demo-1
+        predicates:
+          - Path=/demo1/**
+        filters:
+          - StripPrefix=1
+      - id: demo-2
+        uri: lb://demo-2
+        predicates:
+          - Path=/demo2/**
+        filters:
+          - StripPrefix=1
