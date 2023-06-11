@@ -1,16 +1,26 @@
+server:
+  port: 8080
 spring:
+  application:
+    name: gateway
   cloud:
     gateway:
       routes:
-      - id: demo-1
-        uri: lb://demo-1
+      - id: demo1
+        uri: lb://demo1
         predicates:
           - Path=/demo1/**
         filters:
           - StripPrefix=1
-      - id: demo-2
-        uri: lb://demo-2
+      - id: demo2
+        uri: lb://demo2
         predicates:
           - Path=/demo2/**
         filters:
           - StripPrefix=1
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 6198c6c9-9771-42eb-a131-8da22b227162
+        username: nacos
+        password: nacos

@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * @author TryBin
  */
-@Component(value = "testServier") //注册为spring组件，交予IOC容器管理
-@FeignClient(value = "demo-1") //添加FeignClient注解，绑定服务提供者。
 public interface TestServier {
-    @GetMapping("/test")
     String test();
 
 }

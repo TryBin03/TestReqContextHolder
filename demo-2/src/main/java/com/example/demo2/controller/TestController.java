@@ -15,8 +15,8 @@ public class TestController {
 
     @Autowired
     TestServier testServier;
-    @GetMapping
+    @GetMapping("/t")
     public String test(){
-        return "demo-2 \n demo-1 ip" + testServier.test();
+        return testServier.test();
     }
 }
