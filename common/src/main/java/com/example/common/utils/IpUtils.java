@@ -1,4 +1,4 @@
-package com.example.demo1.utils;
+package com.example.common.utils;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;

@@ -48,6 +48,7 @@
         <module>gateway</module>
         <module>eureka</module>
         <module>api</module>
+        <module>common</module>
     </modules>
     <packaging>pom</packaging>
 
